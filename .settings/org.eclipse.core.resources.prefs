@@ -1,9 +1,6 @@
 eclipse.preferences.version=1
-encoding//scrapy_dev/scrapy_dev/cmdline.py=utf-8
-encoding//scrapy_dev/scrapy_dev/pipelines.py=utf-8
-encoding//scrapy_dev/scrapy_dev/settings.py=utf-8
-encoding//scrapy_dev/scrapy_dev/spiders/dianpingToDB.py=utf-8
 encoding//scrapy_dev/scrapy_dev/spiders/getPage_xpath.py=utf-8
+encoding//scrapy_dev/spiders/getPage_xpath.py=utf-8
 encoding//stack/stack/pipelines.py=utf-8
 encoding//stack/stack/settings.py=utf-8
 encoding//stack/stack/spiders/stack_crawler.py=utf-8
