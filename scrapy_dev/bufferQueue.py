@@ -15,12 +15,12 @@ def enQueRegion(item):
     ItemQueue.regonItemQue.put(item)
 
 def deQueRegion():
-    ItemQueue.regonItemQue.get(item)
+    return ItemQueue.regonItemQue.get()
 
 def enQueShop(item):
     ItemQueue.shopItemQue.put(item)
 
 def deQueShop():
-    ItemQueue.shopItemQue.get(item)
+    return ItemQueue.shopItemQue.get()
 
 

@@ -3,10 +3,14 @@
 from scrapy.spiders import Spider
 from scrapy.selector import Selector
 from scrapy_dev.items import RegionItem
-from scrapy_dev.bufferQueue import enQueRegion
-import json
+from scrapy_dev.bufferQueue import enQueRegion, deQueRegion
+from dmoz import DmozSpider
+from getPage_xpath import DpToFileSpider
 
-class DmozSpider(Spider):
+import json
+from scrapy.crawler import CrawlerProcess
+
+class DzdbSpider(Spider):
     name = "toDB"
                    
     allowed_domains = ["dianping.com"]
@@ -26,12 +30,13 @@ class DmozSpider(Spider):
             region['href'] = site.xpath('a/@href').extract()
             #region['abUrl'] = site.xpath('text()').re('-\s[^\n]*\\r')
             items.append(region)  
-            enQueRegion(region)
-            jitem = json.dumps(region,cls=RegionEncoder)
-                        
-            print "++++++",jitem
-            print "-----",region,type(region)
-            #print region['name'],region['href']
+#             enQueRegion(region)
+            
+#             jitem = json.dump(region,cls=RegionEncoder)                       
+#             print "++++++",jitem
+
+            print "-----",region,"|||",deQueRegion()
+            
             with open('db.txt','a+') as f:
                 f.write(region['name'][0].encode('utf-8'))
                 f.write(":")
@@ -42,10 +47,18 @@ class DmozSpider(Spider):
 
         return items
 
+
 class RegionEncoder(json.JSONEncoder):
     def default(self, obj):
         if isinstance(obj, RegionItem):
-            return obj["name"]+","+obj["href"]
+            return obj["name"][0].encode('utf-8')+","+obj["href"][0].encode('utf-8')
         return json.JSONEncoder.default(self, obj)
     
+
+# process = CrawlerProcess()
+# # process.crawl(DpToFileSpider)   
+# process.crawl(DzdbSpider) 
+# process.start()
+    
+
     

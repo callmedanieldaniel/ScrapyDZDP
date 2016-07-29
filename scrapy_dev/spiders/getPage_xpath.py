@@ -5,8 +5,8 @@ from scrapy.selector import Selector
 from scrapy_dev.items import RegionItem
 
 
-class DmozSpider(Spider):
-    name = "dianping"
+class DpToFileSpider(Spider):
+    name = "toFile"
                    
     allowed_domains = ["dianping.com"]
     start_urls = [
