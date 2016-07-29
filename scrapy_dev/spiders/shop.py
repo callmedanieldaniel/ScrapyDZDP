@@ -12,8 +12,9 @@ from scrapy.crawler import CrawlerProcess
 
 class DzdbSpider(Spider):
     name = "toDB"
-                   
+    
     allowed_domains = ["dianping.com"]
+    
     start_urls = [
         "http://www.dianping.com/beijing"
     ]
@@ -54,13 +55,6 @@ class RegionEncoder(json.JSONEncoder):
             return obj["name"][0].encode('utf-8')+","+obj["href"][0].encode('utf-8')
         return json.JSONEncoder.default(self, obj)
 
-
-    
-
-# process = CrawlerProcess()
-# # process.crawl(DpToFileSpider)   
-# process.crawl(DzdbSpider) 
-# process.start()
     
 
     
