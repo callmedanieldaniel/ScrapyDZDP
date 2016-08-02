@@ -39,7 +39,9 @@ DOWNLOADER_MIDDLEWARES = {
         'scrapy_dev.rotate_useragent.RotateUserAgentMiddleware' :400
     }
 
-COMMANDS_MODULE = 'scrapy_dev.commands' 
+#COMMANDS_MODULE = 'scrapy_dev.commands' 
+
+
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
 

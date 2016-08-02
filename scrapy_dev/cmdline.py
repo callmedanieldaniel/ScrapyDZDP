@@ -1,3 +1,4 @@
+#coding = utf-8
 '''
 Created on 2015-8-28
 
@@ -6,4 +7,4 @@ Created on 2015-8-28
 import scrapy.cmdline
 
 if __name__ == '__main__':
-    scrapy.cmdline.execute(argv=['scrapy','crawl','toDB'])
+    scrapy.cmdline.execute(argv=['scrapy','crawl','reclusive'])

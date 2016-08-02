@@ -10,8 +10,8 @@ from getPage_xpath import DpToFileSpider
 import json
 from scrapy.crawler import CrawlerProcess
 
-class DzdbSpider(Spider):
-    name = "toDB"
+class ShopSpider(Spider):
+    name = "shop"
     
     allowed_domains = ["dianping.com"]
     

@@ -26,7 +26,6 @@ class DpToFileSpider(Spider):
             #region['abUrl'] = site.xpath('text()').re('-\s[^\n]*\\r')
             items.append(region)    
             print region
-            #print region['name'],region['href']
             with open('region.txt','a+') as f:
                 f.write(region['name'][0].encode('utf-8'))
                 f.write(":")

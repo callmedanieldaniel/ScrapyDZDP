@@ -16,3 +16,14 @@ class RegionItem(Item):
     name = Field()
     href = Field()
     abUrl = Field()
+    
+class ShopItem(Item):
+    name = Field()
+    href = Field()
+    region_tag = Field()
+    comment_title = Field()
+    comment_num = Field()
+    comment_meanPrice = Field()
+    address = Field()
+     
+    

@@ -30,7 +30,7 @@ class DzdbSpider(Spider):
             region['href'] = site.xpath('a/@href').extract()
             #region['abUrl'] = site.xpath('text()').re('-\s[^\n]*\\r')
             items.append(region)  
-#             enQueRegion(region)
+            enQueRegion(region)
             
 #             jitem = json.dump(region,cls=RegionEncoder)                       
 #             print "++++++",jitem
