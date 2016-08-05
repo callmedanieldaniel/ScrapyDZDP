@@ -39,19 +39,7 @@ DOWNLOADER_MIDDLEWARES = {
         'scrapy_dev.rotate_useragent.RotateUserAgentMiddleware' :400
     }
 
-
-ITEM_PIPELINES = {
-    'scrapy_dev.pipelines.MongoDBPipeline': 300,
-}
-
-
-MONGODB_SERVER = "192.168.4.196"
-MONGODB_PORT = 27017
-MONGODB_DB = "scrapy"
-MONGODB_COLLECTION = "dzdp"
-
 #COMMANDS_MODULE = 'scrapy_dev.commands' 
-
 
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)

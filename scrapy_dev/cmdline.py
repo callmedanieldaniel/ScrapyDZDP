@@ -8,3 +8,5 @@ import scrapy.cmdline
 
 if __name__ == '__main__':
     scrapy.cmdline.execute(argv=['scrapy','crawl','reclusive'])
+#     scrapy.cmdline.execute(argv=['scrapy','crawl','toDB'])
+#     scrapy.cmdline.execute(argv=['scrapy','crawl','rTest'])

@@ -26,8 +26,8 @@ class DzdbSpider(Spider):
            
         for site in sites:        
             region = RegionItem()
-            region['name'] = site.xpath('a/text()').extract()   
-            region['href'] = site.xpath('a/@href').extract()
+            region['name'] = site.xpath('.//a/text()').extract()   
+            region['href'] = site.xpath('.//a/@href').extract()
             #region['abUrl'] = site.xpath('text()').re('-\s[^\n]*\\r')
             items.append(region)  
             enQueRegion(region)

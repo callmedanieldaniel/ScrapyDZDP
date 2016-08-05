@@ -7,6 +7,7 @@ encoding//scrapy_dev/settings.py=utf-8
 encoding//scrapy_dev/spiders/dpingToDB.py=utf-8
 encoding//scrapy_dev/spiders/getPage_xpath.py=utf-8
 encoding//scrapy_dev/spiders/reclusiveDP.py=utf-8
+encoding//scrapy_dev/spiders/reclusiveTest.py=utf-8
 encoding//scrapy_dev/spiders/shop.py=utf-8
 encoding//scrapy_multi_pipeline/myscrapy/checkpipe.py=utf-8
 encoding//scrapy_multi_pipeline/myscrapy/items.py=utf-8
